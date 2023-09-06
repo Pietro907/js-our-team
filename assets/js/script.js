@@ -50,22 +50,13 @@ for (let i = 0; i < studentList.length; i++) {
 //MILESTONE 2:
 //Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-
-
 for (const key in studentList) {
-
+    
     console.log(key);
     console.log(studentList[key]);
 }
 
 
-/* cardStudent.insertAdjacentHTML
-(
-    `    
-    
-    `
-); 
- */
 
 
 
