@@ -37,9 +37,16 @@ const studentList = [
 
 ];
 console.log(studentList);
-
 //MILESTONE 1:
 //Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+for(let i = 0; i < studentList.length; i++){
+    const studentInfo = studentList[i];
+    console.log(studentInfo['nome']);
+    console.log(studentInfo['cognome']);
+    console.log(studentInfo['job']);
+}
+
+
 //MILESTONE 2:
 //Stampare le stesse informazioni su DOM sottoforma di stringhe
 
