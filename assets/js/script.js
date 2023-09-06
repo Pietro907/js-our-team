@@ -3,7 +3,31 @@ MILESTONE 0:
 Creare l’array di oggetti con le informazioni fornite.
 */ 
 
-const 
+const studentList = [
+    {
+      nome:  'Wayne ',
+      cognome: 'Barnett',
+      job: 'Founder & CEO',
+      nome: 'Angela', 
+      cognome: 'Caroll',
+      job: 	'Chief Editor',
+      nome: 'Walter',
+      cognome: ' Gordon',
+      job: 'Office Manager',
+      nome: 'Angela',
+      cognome: ' Lopez',
+      job: 'Social Media Manage',
+      nome: 'Scott',
+      cognome: ' Estrada',
+      job:	'Developer',
+      nome: 'Barbara',
+      cognome: ' Ramos',
+      job:	'Graphic Designer',
+    }
+
+];
+console.log(studentList);
+
 //MILESTONE 1:
 //Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 //MILESTONE 2:
@@ -15,7 +39,7 @@ Dati
 Wayne Barnett
 Founder & CEO	
 Angela Caroll	
-Chief Editor	
+	
 Walter Gordon
 Office Manager
 Angela Lopez
