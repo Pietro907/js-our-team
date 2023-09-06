@@ -8,18 +8,28 @@ const studentList = [
       nome:  'Wayne ',
       cognome: 'Barnett',
       job: 'Founder & CEO',
+    },
+    {
       nome: 'Angela', 
       cognome: 'Caroll',
       job: 	'Chief Editor',
+    },
+    {
       nome: 'Walter',
       cognome: ' Gordon',
       job: 'Office Manager',
+    },
+    {  
       nome: 'Angela',
       cognome: ' Lopez',
       job: 'Social Media Manage',
+    },
+    {
       nome: 'Scott',
       cognome: ' Estrada',
       job:	'Developer',
+    },
+    {
       nome: 'Barbara',
       cognome: ' Ramos',
       job:	'Graphic Designer',
