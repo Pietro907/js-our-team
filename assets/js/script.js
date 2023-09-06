@@ -51,18 +51,3 @@ for(let i = 0; i < studentList.length; i++){
 //Stampare le stesse informazioni su DOM sottoforma di stringhe
 
 
-/*
-Dati
-Wayne Barnett
-Founder & CEO	
-Angela Caroll	
-	
-Walter Gordon
-Office Manager
-Angela Lopez
-Social Media Manage
-Scott Estrada	
-Developer	
-Barbara Ramos	
-Graphic Designer	
-*/
