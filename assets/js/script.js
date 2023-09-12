@@ -4,8 +4,7 @@ Creare l’array di oggetti con le informazioni fornite.
 */
 
 /* 
-BONUS 1:
-Trasformare la stringa foto in una immagine effettiva
+
 
 BONUS 2:
 Organizzare i singoli membri in card/schede
@@ -90,28 +89,34 @@ for (let i = 0; i < studentList.length; i++) {
 
 //MILESTONE 2:
 //Stampare le stesse informazioni su DOM sottoforma di stringhe
-document.querySelector('.avatar').innerHTML = studentList[0].nome + ' ' + studentList[0].role + ' ' + studentList[0].image;
-document.querySelector('.avatar2').innerHTML = studentList[1].nome + ' ' + studentList[1].role + ' ' + studentList[0].image;
-document.querySelector('.avatar3').innerHTML = studentList[2].nome + ' ' + studentList[2].role + ' ' + studentList[0].image;
-document.querySelector('.avatar4').innerHTML = studentList[3].nome + ' ' + studentList[3].role + ' ' + studentList[0].image;
-document.querySelector('.avatar5').innerHTML = studentList[4].nome + ' ' + studentList[4].role + ' ' + studentList[0].image;
-document.querySelector('.avatar6').innerHTML = studentList[5].nome + ' ' + studentList[5].role + ' ' + studentList[0].image;
+document.querySelector('.avatar').innerHTML = `${studentList[0].nome},<br> ${studentList[0].role},<br> `;
+document.querySelector('.avatar2').innerHTML = `${studentList[1].nome},<br> ${studentList[1].role},<br>`;
+document.querySelector('.avatar3').innerHTML = `${studentList[2].nome},<br> ${studentList[2].role},<br>`;
+document.querySelector('.avatar4').innerHTML = `${studentList[3].nome},<br> ${studentList[3].role},<br>`;
+document.querySelector('.avatar5').innerHTML = `${studentList[4].nome},<br> ${studentList[4].role},<br>`;
+document.querySelector('.avatar6').innerHTML = `${studentList[5].nome},<br> ${studentList[5].role},<br>`;
 
 
 
 /* ORA CICLIAMO ALL'INTERNO DELL'OGGETTO member RECUPERATO CON UN LOOP FOR IN PER RECUPERARE LE PROPRIETA' ED ASSEGNARLE A DELLE VARIABILI */
-/* for (const key in students) {
+for (const key in studentList) {
 
-    // console.log("Key:", key);
+    //console.log("Key:", key);
 
-    const value = students[key]
-    // console.log("Value:", value);
+    const value = studentList[key]
+    //console.log("Value:", value);
 
-    const prop = `${key}: ${value}`;
-    console.log("Property =", prop);
+    const prop = `${studentList[key].nome},<br> ${studentList[key].role},<br> ${studentList[key].image}`;
+    //console.log("Property =", prop)
 
+    console.log(prop);
+    
 }
- */
+const img = document.createElement("img");
+img.src = "http://www.google.com/intl/en_com/images/logo_plain.png";
+const src = document.getElementById("header");
+src.appendChild(img);
+
 
 
 
