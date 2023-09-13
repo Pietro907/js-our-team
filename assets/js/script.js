@@ -98,26 +98,50 @@ document.querySelector('.avatar6').innerHTML = `${studentList[5].nome},<br> ${st
 
 
 
-/* ORA CICLIAMO ALL'INTERNO DELL'OGGETTO member RECUPERATO CON UN LOOP FOR IN PER RECUPERARE LE PROPRIETA' ED ASSEGNARLE A DELLE VARIABILI */
-for (const key in studentList) {
+/* ORA CICLIAMO ALL'INTERNO DELL'OGGETTO studentList RECUPERATO CON UN LOOP FOR IN PER RECUPERARE LE PROPRIETA' ED ASSEGNARLE A DELLE VARIABILI */
 
-    //console.log("Key:", key);
-
-    const value = studentList[key]
-    //console.log("Value:", value);
-
-    const prop = `${studentList[key].nome},<br> ${studentList[key].role},<br> ${studentList[key].image}`;
-    //console.log("Property =", prop)
-
-    console.log(prop);
+function name(params) {
     
+
+
+    for (const key in studentList) {
+
+        //console.log("Key:", key);
+
+        const value = studentList[key]
+        //console.log("Value:", value);
+
+        const prop = `${studentList[key].nome},<br> ${studentList[key].role},<br> ${studentList[key].image}`;
+        //console.log("Property =", prop)
+
+        console.log(prop);
+
+    }
+    //const img = document.createElement("img");
+    //img.src = "js-our-team/assets/img/angela-caroll-chief-editor.jpg";
+
+    //src.appendChild(img);
+
+
+
+
+    /* const img = new Image();
+    const div = document.getElementById('header');
+
+    img.onload = function(){
+        div.appendChild(img);
+    }
+
+    img.src = `js-our-team/assets/img/angela-caroll-chief-editor.jpg` */
+
+    //La strada giusta?
+    const img = `./assets/img/${students.image}`
+    const markupProfile = `
+    <div class="col border">
+        <img src="${img}" alt="">
+        <div class="card border-0 mt-5 p-5 avatar2"></div>
+    </div>`;
+    const src = document.querySelectorAll(".header");
+
+    src.insertAdjacentHTML('beforeend', markupProfile);
 }
-const img = document.createElement("img");
-img.src = "http://www.google.com/intl/en_com/images/logo_plain.png";
-const src = document.getElementById("header");
-src.appendChild(img);
-
-
-
-
-
