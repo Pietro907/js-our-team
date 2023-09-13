@@ -74,7 +74,7 @@ const studentList = [
     }
 
 ];
-console.log(studentList);
+console.log(studentList + ' sei dentro il ciclo for');
 
 //MILESTONE 1:
 //Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
@@ -83,40 +83,40 @@ for (let i = 0; i < studentList.length; i++) {
     const students = studentList[i];
     //stampo in console gli studenti con le relative informazioni
     console.log(students);
+
+      for (const key in students) {
+
+        //console.log("Key:", key);
+
+        const value = students[key]
+        //console.log("Value:", value);
+
+        const prop = `${key} ${value}`;
+        //console.log("Property =", prop)
+
+        console.log(prop + ' sei dentro il ciclo for..in !!!');
+
+    }
+
 }
 
 
 
 //MILESTONE 2:
 //Stampare le stesse informazioni su DOM sottoforma di stringhe
-document.querySelector('.avatar').innerHTML = `${studentList[0].nome},<br> ${studentList[0].role},<br> `;
-document.querySelector('.avatar2').innerHTML = `${studentList[1].nome},<br> ${studentList[1].role},<br>`;
-document.querySelector('.avatar3').innerHTML = `${studentList[2].nome},<br> ${studentList[2].role},<br>`;
-document.querySelector('.avatar4').innerHTML = `${studentList[3].nome},<br> ${studentList[3].role},<br>`;
-document.querySelector('.avatar5').innerHTML = `${studentList[4].nome},<br> ${studentList[4].role},<br>`;
-document.querySelector('.avatar6').innerHTML = `${studentList[5].nome},<br> ${studentList[5].role},<br>`;
 
 
 
-/* ORA CICLIAMO ALL'INTERNO DELL'OGGETTO studentList RECUPERATO CON UN LOOP FOR IN PER RECUPERARE LE PROPRIETA' ED ASSEGNARLE A DELLE VARIABILI */
 
-function name(params) {
+/* Cicliamo studentList RECUPERATO CON UN LOOP FOR IN PER RECUPERARE LE PROPRIETA' ED ASSEGNARLE A DELLE VARIABILI */
+
+//const markup = ``;
+
+
     
+/*
 
-
-    for (const key in studentList) {
-
-        //console.log("Key:", key);
-
-        const value = studentList[key]
-        //console.log("Value:", value);
-
-        const prop = `${studentList[key].nome},<br> ${studentList[key].role},<br> ${studentList[key].image}`;
-        //console.log("Property =", prop)
-
-        console.log(prop);
-
-    }
+  
     //const img = document.createElement("img");
     //img.src = "js-our-team/assets/img/angela-caroll-chief-editor.jpg";
 
@@ -133,7 +133,7 @@ function name(params) {
     }
 
     img.src = `js-our-team/assets/img/angela-caroll-chief-editor.jpg` */
-
+/*
     //La strada giusta?
     const img = `./assets/img/${students.image}`
     const markupProfile = `
@@ -144,4 +144,4 @@ function name(params) {
     const src = document.querySelectorAll(".header");
 
     src.insertAdjacentHTML('beforeend', markupProfile);
-}
+*/
