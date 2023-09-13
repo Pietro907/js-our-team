@@ -1,17 +1,11 @@
-/* Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team. Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
-MILESTONE 0:
-Creare l’array di oggetti con le informazioni fornite.
+/* 
+
+Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team. Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
+
 */
 
 /* 
 
-
-BONUS 2:
-Organizzare i singoli membri in card/schede
-Consigli del giorno:
-Ragioniamo come sempre a step. Prima la logica in italiano e poi traduciamo in codice.
-E ricordiamoci che console.log() è nostro amico!
-Buon divertimento e confermate lettura come al solito!
 
 Dati:
 Wayne Barnett
@@ -41,16 +35,19 @@ barbara-ramos-graphic-designer.jpg
 */
 
 
+//MILESTONE 0:
+//Creare l’array di oggetti con le informazioni fornite. 
+
 const studentList = [
     {
         nome: 'Wayne Barnett',
         role: 'Founder & CEO',
-        image: 'js-our-team/assets/img/wayne-barnett-founder-ceo.jpg'
+        image: 'wayne-barnett-founder-ceo.jpg'
     },
     {
         nome: 'Angela Caroll',
         role: 'Chief Editor',
-        image: 'js-our-team/assets/img/angela-caroll-chief-editor.jpg'
+        image: 'angela-caroll-chief-editor.jpg'
     },
     {
         nome: 'Walter Gordon',
@@ -84,7 +81,7 @@ for (let i = 0; i < studentList.length; i++) {
     //stampo in console gli studenti con le relative informazioni
     console.log(students);
 
-      for (const key in students) {
+    for (const key in students) {
 
         //console.log("Key:", key);
 
@@ -98,50 +95,43 @@ for (let i = 0; i < studentList.length; i++) {
 
     }
 
+
+
+
+
+    //MILESTONE 2:
+    //Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+    //Creo il markup del percorso delle immagini
+    const markupImage = `./assets/img/${students.image}`
+    //Creo il markup da inserire poi nella DOM e scrivo un pò di HTML
+    //Nel src al posto del percorso inseriamo il markupImage (è la stessa cosa)
+    const markupCard = `
+    <div class="col border">
+        <img src="${markupImage}" alt="">
+        <div class="card border-0 mt-5 p-5 avatar2">
+        <h3>${students.nome}</h3>
+        <h4>${students.role}</h4>
+        </div>
+    </div>`;
+
+
+    //Assegno ad una variabile un elemento della DOM in cui inserirò il markupCard
+    const cardElementDom = document.querySelector('.row')
+
+    //Stampo a schermo il markupCard con il metodo insertAdjacentHTML
+    cardElementDom.insertAdjacentHTML("beforeend", markupCard);
+
 }
 
+/* 
 
+BONUS 2:
+Organizzare i singoli membri in card/schede
+Consigli del giorno:
+Ragioniamo come sempre a step. Prima la logica in italiano e poi traduciamo in codice.
+E ricordiamoci che console.log() è nostro amico!
+Buon divertimento e confermate lettura come al solito!
 
-//MILESTONE 2:
-//Stampare le stesse informazioni su DOM sottoforma di stringhe
-
-
-
-
-/* Cicliamo studentList RECUPERATO CON UN LOOP FOR IN PER RECUPERARE LE PROPRIETA' ED ASSEGNARLE A DELLE VARIABILI */
-
-//const markup = ``;
-
-
-    
-/*
-
-  
-    //const img = document.createElement("img");
-    //img.src = "js-our-team/assets/img/angela-caroll-chief-editor.jpg";
-
-    //src.appendChild(img);
-
-
-
-
-    /* const img = new Image();
-    const div = document.getElementById('header');
-
-    img.onload = function(){
-        div.appendChild(img);
-    }
-
-    img.src = `js-our-team/assets/img/angela-caroll-chief-editor.jpg` */
-/*
-    //La strada giusta?
-    const img = `./assets/img/${students.image}`
-    const markupProfile = `
-    <div class="col border">
-        <img src="${img}" alt="">
-        <div class="card border-0 mt-5 p-5 avatar2"></div>
-    </div>`;
-    const src = document.querySelectorAll(".header");
-
-    src.insertAdjacentHTML('beforeend', markupProfile);
 */
+
