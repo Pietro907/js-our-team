@@ -107,13 +107,19 @@ for (let i = 0; i < studentList.length; i++) {
     //Creo il markup da inserire poi nella DOM e scrivo un pò di HTML
     //Nel src al posto del percorso inseriamo il markupImage (è la stessa cosa)
     const markupCard = `
-    <div class="col border">
-        <img src="${markupImage}" alt="">
-        <div class="card border-0 mt-5 p-5 avatar2">
-        <h3>${students.nome}</h3>
-        <h4>${students.role}</h4>
-        </div>
-    </div>`;
+    <div class="col bg-dark border d-flex align-items-center my-5 w-75">
+            
+            <div class="avatar py-3">
+                <img src="${markupImage}" alt="" class="w-75">
+            </div>
+
+            <div class="card text-white bg-secondary border-0 mt-5 p-5 avatar2 mx-auto">
+
+                <h3>${students.nome}</h3>
+                <h4>${students.role}</h4>
+
+            </div>
+        </div>`;
 
 
     //Assegno ad una variabile un elemento della DOM in cui inserirò il markupCard
@@ -128,10 +134,10 @@ for (let i = 0; i < studentList.length; i++) {
 
 BONUS 2:
 Organizzare i singoli membri in card/schede
+
 Consigli del giorno:
 Ragioniamo come sempre a step. Prima la logica in italiano e poi traduciamo in codice.
-E ricordiamoci che console.log() è nostro amico!
-Buon divertimento e confermate lettura come al solito!
+E ricordiamoci che console.log() è nostro amico!S
 
 */
 
